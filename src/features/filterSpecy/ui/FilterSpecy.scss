@@ -1,0 +1,32 @@
+.specy-btn {
+	border: 1px solid rgb(190, 190, 190);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	background: none;
+	width: 100%;
+	font-size: 18px;
+	color: var(--gray);
+}
+.bx {
+	font-size: 35px;
+}
+// body
+.accordion__body {
+	padding: 15px 10px;
+	border: 1px solid rgb(190, 190, 190);
+	display: none;
+}
+.expanded-btn {
+	box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+		rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+	color: var(--blue);
+}
+
+.expanded-body {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 10px;
+}

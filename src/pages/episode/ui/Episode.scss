@@ -1,0 +1,16 @@
+.episode__title {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+.episode__body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.episode__list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 73%;
+	gap: 20px;
+}

@@ -1,0 +1,27 @@
+.filter-wrapper {
+	width: 25%;
+  display: flex;
+  flex-direction: column;
+	padding: 0 20px;
+}
+.filter__btn-reset{
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-size: 20px;
+  margin: 10px 0;
+}
+.filter__title{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
+}
+
+//hovers and actives
+.filter__btn-reset:hover, :active{
+  color: var(--black);
+}
+.filter__btn-reset:active{
+  color: var(--blue);
+}

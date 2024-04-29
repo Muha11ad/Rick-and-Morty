@@ -1,0 +1,20 @@
+header{
+    background-color: var(--light);
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title-link{
+    font-weight: 300;
+    color: var(--black);
+}
+.header__title-part{
+    color: blue;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
