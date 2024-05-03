@@ -1,37 +1,56 @@
+//imports
 import "./Episode.scss";
-import { useEffect } from "react";
-import { Card } from "../../../entities/card/index.js";
-import { fetchCategory, IndividualState } from "../../charachters/model/CharacterSlice.js";
-import { useAppDispatch, useAppSelector } from "../../../shared/store/store.js";
 import { Header } from "../../../widgets/header/index.js";
+import { useAppDispatch, useAppSelector } from "../../../shared/store/store";
+import { useEffect, useState } from "react";
+import { fetchEpisode } from "../model/EpisodeSlice";
+import { Card } from "../../../entities/card";
+import { Select } from "../../../widgets/select";
+//imports
 
 export const Episode = () => {
+	//variables
+	const singleEpisode = useAppSelector((state) => state.episode.singleEpisode);
+	const allApisodes = useAppSelector((state) => state.episode.allEpisodes);
+	const characters = useAppSelector((state) => state.episode.characters);
+	const id = useAppSelector((state) => state.episode.id);
+	const status = useAppSelector((state) => state.episode.status);
 	const dispatch = useAppDispatch();
-	const data = useAppSelector((state) => state.category.data);
-	const status = useAppSelector((state) => state.category.status);
-	const error = useAppSelector((state) => state.category.error);
+	//variables
 
+	//alghoritm
 	useEffect(() => {
-		if (status === "idle") dispatch(fetchCategory("episode"));
-	}, [status, dispatch]);
+		dispatch(fetchEpisode({ idOfEpisode: id }));		
+	}, [dispatch, id]);
 
-	let content ;
+	let episodeName;
+	let airDate;
+	let content;
 	if (status === "laoding") {
 		content = <p>Loading...</p>;
 	} else if (status === "succeeded") {
-		content = data.map((item : IndividualState) => (
-	 	<Card key={item.id} item={item} />
-        ));
-	} else {
-		content = <p>{error}</p>;
+		episodeName = singleEpisode.name;
+		airDate = singleEpisode.air_date;
+		content = characters?.map((item, index) => {
+			return <Card key={index} item={item} />;
+		});
 	}
+	//alghoritm
+
 	return (
 		<>
 			<Header />
 			<div className="container episode__container">
-				<h2 className="episode__title">Episode name : Pilot</h2>
-				<p className="episode__time">Air Date: December 2, 2013</p>
+				<div className="episode__top">
+					<h2 className="episode__title">
+						Episode name : <span className="blue"> {episodeName}</span>
+					</h2>
+					<p className="episode__time">
+						Air Date: <span className="blue">{airDate}</span>
+					</p>
+				</div>
 				<div className="episode__body">
+					<Select name="Episode" data={Array.isArray(allApisodes)? allApisodes : [allApisodes]}/>
 					<ul className="episode__list">{content}</ul>
 				</div>
 			</div>

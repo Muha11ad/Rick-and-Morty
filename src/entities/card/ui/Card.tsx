@@ -1,21 +1,17 @@
+//imports start
 import { Link } from "react-router-dom";
-import { SingleHeroState } from "../../../pages/charachters/model/CharacterSlice.js";
-
+import { SingleHeroState } from "../../../shared/api/apiStore.js";
 import { HerosStatuses } from "../../../shared/herosStatuses/index.js";
 import "./Card.scss";
+//imports end
+
 export const Card = ({ item }: any) => {
-	const {
-		id,
-		image,
-		name,
-		status,
-		species,
-		gender,
-		location,
-	}: SingleHeroState = item;
+//destructing starts
+const { id,image, name, status, species, gender, location,}: SingleHeroState = item;
+//destructing ends
 	return (
 		<li className="card-wrapper">
-			<Link id={id.toString()} className="card__link" to="/">
+			<Link id={id.toString()} className="card__link" to={`/character/:${id}`}>
 				<img className="card__img" src={image} alt="Card image" />
 				<div className="card__body">
 					<h3 className="body__title">{name}</h3>

@@ -1,12 +1,18 @@
+//imports start
 import { useState } from "react";
+import { useAppSelector } from "../../../shared/store/store.js";
 import { FilterCheckbox } from "../../filterCheckbox/index.js";
 import "./FilterStatus.scss";
+//imports end
 
 export const FilterStatus = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-	const toggleAccordion = (): void => {
-		setIsExpanded(!isExpanded);
-	};
+//variables start
+const [isExpanded, setIsExpanded] = useState(false);
+const toggleAccordion = (): void => {
+	setIsExpanded(!isExpanded);
+};
+const statuses = useAppSelector((state) => state.characters.statusesArray);
+//variables send
 	return (
 		<div className="accardion-wrapper">
 			<button
@@ -19,7 +25,11 @@ export const FilterStatus = () => {
 				></i>
 			</button>
 			<div className={`accordion__body ${isExpanded ? "expanded-body" : ""}`}>
-				<FilterCheckbox />
+				{statuses
+					? statuses.map((status : any, index : any) => (
+							<FilterCheckbox key={index} id={index} text={status} name="status" />
+					  ))
+					: " "}
 			</div>
 		</div>
 	);

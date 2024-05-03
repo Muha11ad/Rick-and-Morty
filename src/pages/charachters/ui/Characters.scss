@@ -1,18 +1,18 @@
-.character_container{
+.characters-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.character__title{
+.characters__title{
     font-size: 2.5rem;
     font-weight: 500;
 }
-.character-body{
+.characters-body{
     display: flex;
     justify-content: space-between;
 }
-.character__body__list{
+.characters__list{
     display: flex;
     align-items: center;
     flex-wrap: wrap;

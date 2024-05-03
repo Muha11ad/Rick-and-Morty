@@ -1,14 +1,14 @@
-.btn-check {
+.radio-check {
 	display: none;
 }
 
-.btn {
+.label-radio {
 	display: inline-block;
 	padding: 0.375rem 0.75rem;
 	cursor: pointer;
 }
 
-.btn-secondary {
+.label-secondary {
 	background-color: none;
 	color: var(--blue);
 	border: 1px solid;
@@ -16,7 +16,7 @@
 	border-color: var(--blue);
 }
 
-.btn-check:checked + .btn-secondary {
+.radio-check:checked + .label-secondary {
 	background-color: var(--blue);
     color: white;
 }

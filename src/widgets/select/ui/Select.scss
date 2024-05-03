@@ -1,0 +1,18 @@
+.select-wrapper{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.select{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.select__title{
+    font-size: 2rem;
+    font-weight: 500;
+}

@@ -9,7 +9,7 @@ interface propsState{
 export const Navigation = ({to, context} : propsState) => {
 	return (
 		<li className="item">
-			<NavLink to={to}  className="item__link">
+			<NavLink to={to}  className={({isActive}) => isActive ? "active": "inactive" }>
 				{context}
 			</NavLink>
 		</li>

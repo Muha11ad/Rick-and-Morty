@@ -1,13 +1,13 @@
-.episode__top {
+.location__top {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
-	.episode__title {
+	.location__title {
 		font-size: 2.5rem;
 		font-weight: 500;
 	}
-	.episode__time {
+	.location__time {
 		font-size: 1.25rem;
 		font-weight: 500;
 		color: var(--black);
@@ -17,12 +17,12 @@
 		color: var(--blue);
 	}
 }
-.episode__body {
+.location__body {
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
 }
-.episode__list {
+.location__list {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;

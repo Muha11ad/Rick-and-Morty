@@ -1,0 +1,19 @@
+.character-container{
+display: flex;
+flex-direction: row;
+gap: 40px;
+margin-top: 7%;
+}
+.character-img{
+width: 30%;
+border-radius: 10px;
+}
+.character__subtitle{
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: 500;
+    margin: 10px 0 ;
+    span{
+        color: var(--blue);
+    }
+}

@@ -1,9 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import CharacterReducer from "../../pages/charachters/model/CharacterSlice.js"
+import PaginationReducer from "../../features/Pagination/model/PaginationSlice.js"
+import CharactersReducer from "../../pages/charachters/model/CharactersSlice.js"
+import CharacterReducer from "../../pages/character/model/CharacterSlice"
+import EpisodeReducer from "../../pages/episode/model/EpisodeSlice.js"
+import LocationReducer from "../../pages/location/model/LocationSlice.js"
 export const store = configureStore({
     reducer: {
-        characters : CharacterReducer
+        page :  PaginationReducer,
+        characters :  CharactersReducer,
+        character : CharacterReducer,
+        episode : EpisodeReducer,
+        location : LocationReducer
     },
 })
 
