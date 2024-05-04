@@ -1,6 +1,6 @@
+import { SingleHeroState } from "../../../pages/charachters/model/CharactersSlice";
 import { getEpisode } from "../../../pages/episode/model/EpisodeSlice";
 import { getLocation } from "../../../pages/location/model/LocationSlice";
-import { SingleHeroState } from "../../../shared/api/apiStore";
 import { useAppDispatch } from "../../../shared/store/store";
 import "./Select.scss";
 interface SelectProps {

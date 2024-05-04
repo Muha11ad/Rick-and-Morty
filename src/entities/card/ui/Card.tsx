@@ -1,6 +1,6 @@
 //imports start
 import { Link } from "react-router-dom";
-import { SingleHeroState } from "../../../shared/api/apiStore.js";
+import { SingleHeroState } from "../../../pages/charachters/model/CharactersSlice.js";
 import { HerosStatuses } from "../../../shared/herosStatuses/index.js";
 import "./Card.scss";
 //imports end

@@ -1,9 +1,9 @@
 //imports start
 import "./Characters.scss";
 import { useEffect } from "react";
-import { Card } from "../../../entities/card/index.js";
-import { Header } from "../../../widgets/header/index.js";
-import { SearchBar } from "../../../widgets/searchBar/indext.js";
+import { Card } from "../../../entities/card";
+import { Header } from "../../../widgets/header";
+import { SearchBar } from "../../../widgets/searchBar";
 import { Pagination } from "../../../features/Pagination/index.js";
 import { FilterCharacters } from "../../../widgets/filter/index.js";
 import { useAppDispatch, useAppSelector } from "../../../shared/store/store.js";

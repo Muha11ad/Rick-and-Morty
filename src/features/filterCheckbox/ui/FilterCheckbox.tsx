@@ -1,6 +1,6 @@
 //imports start
 import {getByGender, getByStatus, getBySpecy} from "../../../pages/charachters/model/CharactersSlice";
-import { useAppDispatch, useAppSelector } from "../../../shared/store/store";
+import { useAppDispatch} from "../../../shared/store/store";
 import "./FilterCheckbox.scss";
 //imports end
 

@@ -2,7 +2,7 @@
 import "./Episode.scss";
 import { Header } from "../../../widgets/header/index.js";
 import { useAppDispatch, useAppSelector } from "../../../shared/store/store";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { fetchEpisode } from "../model/EpisodeSlice";
 import { Card } from "../../../entities/card";
 import { Select } from "../../../widgets/select";

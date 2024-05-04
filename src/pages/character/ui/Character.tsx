@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { Card } from "../../../entities/card";
 import { useAppDispatch, useAppSelector } from "../../../shared/store/store";
 import { Header } from "../../../widgets/header";
 import { fetchSingleCharacter } from "../model/CharacterSlice";
